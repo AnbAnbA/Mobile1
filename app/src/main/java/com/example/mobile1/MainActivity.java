@@ -95,6 +95,7 @@ private void Triage() {
 
                 }
             });
+                GetTextFromSQL(v);
         }
         catch (Exception ex)
         {
@@ -106,7 +107,7 @@ private void Triage() {
 
     private void sortingPrice(String st) {
         try {
-            st = "Select * From Musical_Instrument ORDER BY Price";
+            st = "Select * From Musical_Instrument ORDER BY Price_MI";
             selectSort(st);
         } catch (Exception ex) {
             Toast.makeText(MainActivity.this, "Что-то так...", Toast.LENGTH_LONG).show();
